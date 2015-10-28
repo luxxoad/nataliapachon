@@ -2,10 +2,17 @@
 
 <h1>Listing Items</h1>
 
+<div class="panel panel-default panel-success">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Panel heading</div>
+  <table class="table">
+
+
 <table>
   <thead>
     <tr>
       <th>Name</th>
+      <th>Category</th>
       <th>Description</th>
       <th>Price</th>
       <th>Stock</th>
@@ -17,6 +24,7 @@
     <% @items.each do |item| %>
       <tr>
         <td><%= item.name %></td>
+        <th><%= !item.category.nil? ? item.category.name : "No category" %></td>
         <td><%= item.description %></td>
         <td><%= item.price %></td>
         <td><%= item.stock %></td>
@@ -27,6 +35,7 @@
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
 
