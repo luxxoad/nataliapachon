@@ -6,10 +6,8 @@ gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
 
 #heroku needs:
-group:production do
-gem 'rails_12factor' #required by heroku
-gem 'pg'
-end
+gem 'rails_12factor', group: :production #required by
+gem 'pg', group: :production
 
 group:development do
 gem 'sqlite3'
