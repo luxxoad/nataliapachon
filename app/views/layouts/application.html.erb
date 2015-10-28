@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Athena</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<img src="https://s-media-cache-ak0.pinimg.com/236x/b1/28/bf/b128bf157773c96d16f358931da6d488.jpg">
+<% if user_signed_in? %>
+	<%= link_to 'logout', destroy_user_session_path, :method => :delete %>
+<%end%>
+	<%= yield %>
+
+
+</body>
+</html>
