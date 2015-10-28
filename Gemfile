@@ -7,7 +7,6 @@ gem 'rails', '4.2.4'
 
 #heroku needs:
 group:production do
-gem 'thin'
 gem 'rails_12factor' #required by heroku
 gem 'pg'
 end
